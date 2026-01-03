@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Requests</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="employee-page">
+
+<div class="card wide-card">
+    <h2>📋 Leave Requests</h2>
+    <p class="subtitle">Review and approve employee leave applications</p>
+
+    {% if leaves %}
+    <table class="leave-table">
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        {% for leave in leaves %}
+        <tr>
+            <td>{{ leave[0] }}</td>
+            <td>{{ leave[1] }}</td>
+            <td>{{ leave[2] }}</td>
+            <td>{{ leave[3] }}</td>
+
+            <td>
+                {% if leave[4] == 'Pending' %}
+                    <span class="status pending">Pending</span>
+                {% else %}
+                    <span class="status approved">Approved</span>
+                {% endif %}
+            </td>
+
+            <td>
+                {% if leave[4] == 'Pending' %}
+                <a href="/approve_leave/{{ leave[0] }}">
+                    <button class="success small-btn">Approve</button>
+                </a>
+                {% else %}
+                    <span class="done">✔ Done</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p class="empty">No leave requests available</p>
+    {% endif %}
+
+    <a href="/admin">
+        <button>⬅ Back to Dashboard</button>
+    </a>
+</div>
+
+</body>
+</html>

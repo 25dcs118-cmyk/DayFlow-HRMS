@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>My Profile</h2>
+
+    <p><b>Email:</b> {{ user[1] }}</p>
+    <p><b>Role:</b> {{ user[3] }}</p>
+
+    <a href="/employee/{{ user[1] }}"><button>Back</button></a>
+</div>
+
+</body>
+</html>

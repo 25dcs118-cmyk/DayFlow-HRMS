@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Leave</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="employee-page">
+
+<div class="card">
+    <h2>📝 Apply Leave</h2>
+    <p class="subtitle">Submit your leave request</p>
+
+    <form method="post">
+        <label>Reason for Leave</label>
+        <textarea name="reason" rows="4" placeholder="Explain your reason clearly..." required></textarea>
+
+        <button class="success">📨 Submit Request</button>
+    </form>
+
+    <a href="/employee/{{ email }}"><button>⬅ Back</button></a>
+</div>
+
+</body>
+</html>

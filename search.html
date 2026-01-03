@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Employee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h2>🔍 Search Employee</h2>
+
+    <form method="POST">
+        <input type="text" name="keyword" placeholder="Enter email" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+            </tr>
+            {% for r in results %}
+            <tr>
+                <td>{{ r[0] }}</td>
+                <td>{{ r[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% elif request.method == 'POST' %}
+        <p class="warning">❌ No employee found</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

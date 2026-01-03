@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="admin-page">
+
+<div class="card wide-card">
+    <h2>👥 Employee List</h2>
+    <p class="subtitle">All registered employees</p>
+
+    <table class="table">
+        <tr>
+            <th>Email</th>
+        </tr>
+
+        {% for u in users %}
+        <tr>
+            <td>{{ u[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/admin"><button>⬅ Back</button></a>
+</div>
+
+</body>
+</html>

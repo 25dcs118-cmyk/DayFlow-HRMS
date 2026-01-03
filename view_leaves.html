@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Requests</title>
+</head>
+<body>
+
+<h2>Leave Requests</h2>
+
+<table border="1" align="center">
+    <tr>
+        <th>Leave Type</th>
+        <th>From</th>
+        <th>To</th>
+    </tr>
+
+    {% for leave in leaves %}
+    <tr>
+        <td>{{ leave.type }}</td>
+        <td>{{ leave.from }}</td>
+        <td>{{ leave.to }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/admin">Back to Admin Dashboard</a>
+
+</body>
+</html>

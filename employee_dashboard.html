@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="employee-page">
+
+
+<div class="card">
+    <h2>Employee Dashboard</h2>
+    <p>{{ email }}</p>
+
+    <h3 class="welcome">Welcome back 👋</h3>
+    <hr class="divider">
+
+    <a href="/profile/{{ email }}"><button>👤 My Profile</button></a>
+   <a href="/mark_attendance/{{ email }}">
+    <button>🕒 Mark Attendance</button>
+</a>
+
+    <a href="/apply_leave/{{ email }}"> <button>📝 Apply Leave</button></a>
+    <a href="/my_leaves/{{ email }}"><button>📊My Leave Status</button></a>
+    <a href="/payroll/{{ email }}"><button>🚪Payroll</button></a>
+    <a href="/attendance_chart/{{ email }}"><button>📊 Attendance Chart</button></a>
+
+     <a href="/logout"><button class="logout">💰Logout</button></a>
+
+    <div class="stats">
+    <div class="stat">🕒<br>Attendance</div>
+    <div class="stat">📝<br>Leaves</div>
+    <div class="stat">💰<br>Salary</div>
+</div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="employee-page">
+
+<div class="card wide-card">
+    <h2>📊 Attendance Overview</h2>
+
+    {% if dates %}
+        <canvas id="attendanceChart"></canvas>
+    {% else %}
+        <p class="empty">No attendance data available</p>
+    {% endif %}
+
+    <a href="/employee/{{ email }}"><button>⬅ Back</button></a>
+</div>
+
+<script>
+const ctx = document.getElementById('attendanceChart');
+
+if (ctx) {
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {{ dates | tojson }},
+            datasets: [{
+                label: 'Attendance Count',
+                data: {{ counts | tojson }},
+                borderWidth: 2,
+                tension: 0.4
+            }]
+        }
+    });
+}
+</script>
+
+</body>
+</html>

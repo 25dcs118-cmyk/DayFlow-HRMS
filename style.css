@@ -1,0 +1,187 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    background: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #ffffff;
+    padding: 40px;
+    width: 380px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.wide-card {
+    width: 700px;
+}
+
+/* ===== TEXT ===== */
+h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.welcome-text {
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+label {
+    display: block;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ===== BUTTONS (SPACIOUS & MINIMAL) ===== */
+button, .btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover, .btn:hover {
+    background: #1e40af;
+    transform: translateY(-1px);
+}
+
+/* Smaller buttons */
+.btn.small {
+    width: auto;
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+/* Logout / Danger */
+.logout, .danger {
+    background: #dc2626;
+}
+
+.logout:hover, .danger:hover {
+    background: #b91c1c;
+}
+
+/* ===== ADMIN BUTTON GROUP ===== */
+.admin-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.admin-actions a {
+    padding: 14px;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.admin-actions a.logout {
+    background: #dc2626;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+th {
+    background: #f1f5f9;
+    padding: 14px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #334155;
+    text-align: center;
+}
+
+/* ===== STATUS BADGES ===== */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status.pending {
+    background: #fde68a;
+    color: #92400e;
+}
+
+.status.approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* ===== INFO / EMPTY ===== */
+.info-box {
+    background: #f1f5f9;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #334155;
+    font-size: 14px;
+}
+
+.empty {
+    color: #64748b;
+    font-style: italic;
+    margin: 20px 0;
+}

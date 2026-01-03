@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="employee-page">
+
+<div class="card">
+    <h2>🕒 Mark Attendance</h2>
+    <p class="subtitle">Confirm your presence for today</p>
+
+    <div class="info-box">
+        <p>📅 Date: {{ date }}</p>
+        <p>📌 Status: Not Marked</p>
+    </div>
+
+    <form method="post">
+        <button class="success">✅ Mark Present</button>
+    </form>
+
+    <a href="/employee/{{ email }}">
+        <button>⬅ Back</button>
+    </a>
+</div>
+
+</body>
+</html>

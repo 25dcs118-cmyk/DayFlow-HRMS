@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="employee-page">
+
+<div class="card wide-card">
+    <h2>💰 Payroll Details</h2>
+
+    {% if salary %}
+    <table>
+        <tr>
+            <th>Month</th>
+            <th>Salary</th>
+        </tr>
+        {% for s in salary %}
+        <tr>
+            <td>{{ s[2] }}</td>
+            <td>₹ {{ s[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p class="empty">No payroll data available</p>
+    {% endif %}
+
+    <a href="/employee/{{ email }}"><button>Back</button></a>
+</div>
+
+</body>
+</html>

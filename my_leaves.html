@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Leaves</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>My Leave Requests</h2>
+
+    <table>
+        <tr><th>Reason</th><th>Status</th></tr>
+        {% for l in leaves %}
+        <tr>
+            <td>{{ l[2] }}</td>
+            <td>{{ l[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/employee/{{ email }}"><button>Back</button></a>
+</div>
+
+</body>
+</html>
